@@ -1,14 +1,12 @@
 import { BasketItem } from './BasketItem';
-
-function BasketList(props) {
+import {useContext} from 'react'
+import { ShopContext } from '../context';
+function BasketList() {
     const {
         order = [],
         handleBasketShow = Function.prototype,
-        removeFromBasket = Function.prototype,
-        sendOrder = Function.prototype,
-        incQuantity,
-        decQuantity,
-    } = props;
+        sendOrder = Function.prototype
+    } = useContext(ShopContext)
 
 
 
@@ -23,9 +21,6 @@ function BasketList(props) {
                 order.map((item) => (
                     <BasketItem
                         key={item.id}
-                        removeFromBasket={removeFromBasket}
-                        incQuantity={incQuantity}
-                        decQuantity={decQuantity}
                         {...item}
                     />
                 ))
@@ -36,7 +31,10 @@ function BasketList(props) {
                 Общая стоимость: {totalPrice} руб.
             </li>
             <li className='collection-item'>
-                <button onClick={() => sendOrder(totalPrice)} className='btn btn-small'>Оформить</button>
+                
+                <button onClick={
+                    () => sendOrder(totalPrice > 0 && totalPrice)
+                    } className='btn btn-small'>Оформить</button>
             </li>
             <i
                 className='material-icons basket-close'
