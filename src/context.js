@@ -38,8 +38,8 @@ export const ContextProvider = ({ children }) => {
   value.handleBasketShow = () => {
     dispatch({ type: "TOGGLE_BASKET" });
   };
-  value.sendOrder = (totprice) => {
-    dispatch({ type: "SEND_ORDER", payload: {price:totprice} });
+  value.sendOrder = () => {
+    dispatch({ type: "SEND_ORDER"});
   };
 
   value.setGoods = (data) => {

@@ -14,6 +14,15 @@ function BasketList() {
         return sum + el.price * el.quantity;
     }, 0);
 
+    const handleSendOrder = () =>{
+        if (totalPrice>0){
+        alert(`Заказ отправлен по вашему IP, оплата при получении(${totalPrice} руб)`);
+        sendOrder()
+        }else{
+        sendOrder()  
+        }
+    }
+
     return (
         <ul className='collection basket-list'>
             <li className='collection-item active'>Корзина</li>
@@ -33,7 +42,7 @@ function BasketList() {
             <li className='collection-item'>
                 
                 <button onClick={
-                    () => sendOrder(totalPrice > 0 && totalPrice)
+                    handleSendOrder
                     } className='btn btn-small'>Оформить</button>
             </li>
             <i

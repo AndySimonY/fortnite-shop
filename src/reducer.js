@@ -82,16 +82,7 @@ export function reducer(state, { type, payload }) {
       };
     case "SEND_ORDER": {
       let newOrderSend = [];
-      let bas_send_show = state.isBasketShow;
-      
-      if (payload.price > 0) {
-        alert(
-          `Заказ отправлен по вашему IP, оплата при получении(${payload.price} руб)`
-        );
-        bas_send_show = false;
-      } else {
-        bas_send_show = false;
-      }
+      let bas_send_show = !state.isBasketShow;
       return {
         ...state,
         order: newOrderSend,
