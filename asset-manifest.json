@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/fortnite-shop/static/css/main.7091d7dd.chunk.css",
-    "main.js": "/fortnite-shop/static/js/main.a028a315.chunk.js",
-    "main.js.map": "/fortnite-shop/static/js/main.a028a315.chunk.js.map",
+    "main.js": "/fortnite-shop/static/js/main.bf5857c1.chunk.js",
+    "main.js.map": "/fortnite-shop/static/js/main.bf5857c1.chunk.js.map",
     "runtime-main.js": "/fortnite-shop/static/js/runtime-main.008a2d9e.js",
     "runtime-main.js.map": "/fortnite-shop/static/js/runtime-main.008a2d9e.js.map",
     "static/js/2.d26f13c6.chunk.js": "/fortnite-shop/static/js/2.d26f13c6.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.008a2d9e.js",
     "static/js/2.d26f13c6.chunk.js",
     "static/css/main.7091d7dd.chunk.css",
-    "static/js/main.a028a315.chunk.js"
+    "static/js/main.bf5857c1.chunk.js"
   ]
 }
